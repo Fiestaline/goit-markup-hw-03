@@ -1,0 +1,404 @@
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Main CSS */
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+}
+
+body {
+    color: #000000;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2196F3;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
+.header-logo {
+    font-family: 'Raleway';
+    color: #000000;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    position: absolute;
+    margin-left: 215px;
+    margin-top: 24px;
+}
+
+.header-logo-accent {
+
+    color: var(--accent-color);
+}
+
+.header {
+    width: 1600px;
+    height: 80px;
+    background: #FFFFFF;
+
+}
+
+.header-nav {}
+
+.header-nav .link:hover,
+.header-nav .link:focus {
+    color: var(--accent-color);
+}
+
+.header-list {
+    left: 453px;
+    top: 32px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 294px;
+}
+
+.header-item a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+
+}
+
+.header-mail {
+    position: absolute;
+    left: 1078px;
+    top: 32px;
+    color: var(--primary-text-color);
+
+}
+
+.header-tel {
+    position: absolute;
+    left: 1263px;
+    top: 32px;
+    color: var(--primary-text-color);
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero */
+.hero {
+    min-width: 1600px;
+    height: 600px;
+    left: 0px;
+    top: 80px;
+    background-color: #2F303A;
+    margin-bottom: 94px;
+}
+
+.hero-title {
+    position: absolute;
+    width: 696px;
+    height: 120px;
+    left: 452px;
+    top: 280px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.hero-button {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    font-family: inherit;
+}
+
+/* Advantage */
+
+.advantage {
+    padding-bottom: 94px;
+
+}
+
+.advantage-title {
+
+    color: var(--title-text-color);
+}
+
+.advantage-list-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    padding-bottom: 10px;
+}
+
+.advantage-list-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    width: 270px;
+    height: 75px;
+    color: var(--primary-text-color);
+}
+
+/* Чем мы занимаемся */
+
+.gallery {
+    padding-bottom: 94px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+
+.gallery-title,
+.team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    padding-bottom: 50px;
+}
+
+.gallery-list,
+.advantage-list,
+.team-list {
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+/* Наша команда */
+
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #F5F4FA;
+}
+
+.team-list-item {
+    background-color: #fff;
+    width: 270px;
+    height: 368px;
+}
+
+.team-list-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    color: var(--title-text-color);
+}
+
+.team-list-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+}
+
+.portfolio {
+    margin-top: 94px;
+   
+}
+
+.portfolio-title {}
+
+.portfolio-list {
+   text-align: center;
+}
+
+.portfolio-item {
+    display: inline-block;
+}
+
+.portfolio-btn {
+    font-family: inherit;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border: 0px;
+    margin-right: 8px;
+    margin-right: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    color: var(--title-text-color);
+    background-color: #F5F4FA;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+
+}
+
+.porto {
+    margin-top: 50px;
+    
+}
+
+.works-list {
+  
+
+}
+
+.works-item {
+    display: inline-block;
+    width: 370px;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+    
+    background-color: aqua;
+}
+
+.works-img {
+   
+}
+
+.works-item-title {
+    font-weight: 700;
+        font-size: 18px;
+        line-height: 2.0;
+        /* identical to box height, or 200% */
+    
+        letter-spacing: 0.06em;
+    
+        color: var(--title-text-color);
+        padding-left: 24px;
+        padding-top: 20px;
+}
+
+.works-text {
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.03em;
+    
+        color: var(--primary-text-color);
+        padding-left: 24px;
+        padding-bottom: 20px;
+}
+.works-link {
+
+}
